@@ -1,5 +1,11 @@
+import Page from "./component/index";
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <Page />
+    </div>
+  );
 }
 
 export default App;
