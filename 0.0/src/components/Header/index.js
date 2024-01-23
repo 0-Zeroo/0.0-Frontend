@@ -6,8 +6,15 @@ const index = () => {
   return (
     <>
       <S.Container>
-        <S.Img src={logo} />
-        <S.Img src={user} />
+        <S.ImgBox>
+          <S.Img src={logo} />
+          <S.Img src={user} />
+        </S.ImgBox>
+        <S.TextBox>
+          <S.Box>
+            <S.Text>로그인</S.Text>
+          </S.Box>
+        </S.TextBox>
       </S.Container>
     </>
   );
