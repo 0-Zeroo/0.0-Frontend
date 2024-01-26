@@ -6,9 +6,14 @@ const index = () => {
   return (
     <>
       <S.Background>
-        <M.Text>남은 우산</M.Text>
+        <M.ReaminText>남은 우산</M.ReaminText>
         <M.Num>5</M.Num>
-        <UmbrellaNum>Number 우산 번호</UmbrellaNum>
+        <M.TitleText>
+          <M.UmbrellaNum>Number 우산 번호</M.UmbrellaNum>
+          <M.State>State 상태</M.State>
+          <M.Schedule>Schedule 반납 예정일</M.Schedule>
+        </M.TitleText>
+
         <M.TitleCircle />
       </S.Background>
     </>
