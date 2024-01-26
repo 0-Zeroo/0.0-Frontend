@@ -23,3 +23,13 @@ export const Num = styled.span`
   font-weight: 600;
   line-height: normal;
 `;
+
+export const TitleCircle = styled.div`
+  position: absolute;
+  top: 230px;
+  left: 450px;
+  width: 28px;
+  height: 28px;
+  background-color: #fbc22b;
+  border-radius: 50%;
+`;
