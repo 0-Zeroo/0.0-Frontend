@@ -32,6 +32,7 @@ export const TitleCircle = styled.div`
   height: 28px;
   background-color: #fbc22b;
   border-radius: 50%;
+  z-index: 10;
 `;
 
 export const TitleText = styled.div`
@@ -59,4 +60,23 @@ export const Schedule = styled.div`
   position: absolute;
   top: 227px;
   left: 1000px;
+`;
+
+export const Circle = styled.div`
+  position: absolute;
+  top: 330px;
+  left: 355px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #fbc22b;
+`;
+
+export const Stroke = styled.div`
+  position: absolute;
+  top: 250px;
+  left: 364px;
+  width: 1px;
+  height: 94.001px;
+  background-color: #393939;
 `;
