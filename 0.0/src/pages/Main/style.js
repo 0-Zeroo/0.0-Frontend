@@ -77,7 +77,7 @@ export const Stroke = styled.div`
   top: 250px;
   left: 364px;
   width: 1px;
-  height: 94.001px;
+  height: 350px;
   background-color: #393939;
 `;
 
