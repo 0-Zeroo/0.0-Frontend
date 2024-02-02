@@ -101,17 +101,40 @@ export const UmbrellaNum = styled.div`
   gap: 36px;
   position: absolute;
   top: 300px;
-  left: 500px;
+  left: 520px;
 `;
 
 export const State = styled.div`
   position: absolute;
-  top: 330px;
+  top: 300px;
   left: 765px;
 `;
 
-export const Schedule = styled.div`
+export const StateCircle = styled.div`
   position: absolute;
-  top: 330px;
-  left: 1030px;
+  top: 3px;
+  right: 50px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #19e76c;
+`;
+
+export const StateText = styled.div`
+  position: relative;
+  left: 22px;
+`;
+export const Schedule = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  position: absolute;
+  top: 309px;
+  left: 1100px;
+`;
+
+export const ScheduleStroke = styled.div`
+  width: 19px;
+  height: 3px;
+  background-color: #ffffff;
 `;

@@ -28,8 +28,18 @@ const index = () => {
         </M.CircleContainer>
         <M.Text>
           <M.UmbrellaNum>{numberList}</M.UmbrellaNum>
-          <M.State>State 상태</M.State>
-          <M.Schedule>Schedule 반납 예정일</M.Schedule>
+          <M.State>
+            <M.StateCircle />
+            <M.StateText>대여가능</M.StateText>
+          </M.State>
+          <M.Schedule>
+            <M.ScheduleStroke />
+            <M.ScheduleStroke />
+            <M.ScheduleStroke />
+            <M.ScheduleStroke />
+            <M.ScheduleStroke />
+            <M.ScheduleStroke />
+          </M.Schedule>
         </M.Text>
       </S.Background>
     </>
