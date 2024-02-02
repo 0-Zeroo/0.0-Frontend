@@ -44,19 +44,19 @@ export const TitleText = styled.div`
   line-height: normal;
 `;
 
-export const UmbrellaNum = styled.div`
+export const TitleUmbrellaNum = styled.div`
   position: absolute;
   top: 227px;
   left: 440px;
 `;
 
-export const State = styled.div`
+export const TitleState = styled.div`
   position: absolute;
   top: 227px;
   left: 750px;
 `;
 
-export const Schedule = styled.div`
+export const TitleSchedule = styled.div`
   position: absolute;
   top: 227px;
   left: 1000px;
@@ -79,4 +79,33 @@ export const Stroke = styled.div`
   width: 1px;
   height: 94.001px;
   background-color: #393939;
+`;
+
+export const Text = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--White, #fff);
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+`;
+
+export const UmbrellaNum = styled.div`
+  position: absolute;
+  top: 330px;
+  left: 460px;
+`;
+
+export const State = styled.div`
+  position: absolute;
+  top: 330px;
+  left: 765px;
+`;
+
+export const Schedule = styled.div`
+  position: absolute;
+  top: 330px;
+  left: 1030px;
 `;
