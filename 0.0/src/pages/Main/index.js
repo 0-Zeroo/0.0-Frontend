@@ -9,7 +9,7 @@ const index = () => {
   return (
     <>
       <S.Background>
-        <M.ReaminText>남은 우산</M.ReaminText>
+        <M.RemainText>남은 우산</M.RemainText>
         <M.Num>5</M.Num>
         <M.TitleCircle />
         <M.TitleText>
