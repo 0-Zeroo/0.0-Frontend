@@ -1,8 +1,11 @@
 import React from "react";
+import Main from "./Main";
 import * as S from "../../styles/theme";
 import * as M from "./style";
 
 const index = () => {
+  const numbers = ["1", "2", "3", "4", "5", "6"];
+  const numberList = numbers.map((number) => <Main number={number} />);
   return (
     <>
       <S.Background>
@@ -15,9 +18,16 @@ const index = () => {
           <M.TitleSchedule>Schedule 반납 예정일</M.TitleSchedule>
         </M.TitleText>
         <M.Stroke />
-        <M.Circle />
+        <M.CircleContainer>
+          <M.Circle />
+          <M.Circle />
+          <M.Circle />
+          <M.Circle />
+          <M.Circle />
+          <M.Circle />
+        </M.CircleContainer>
         <M.Text>
-          <M.UmbrellaNum>Number 우산 번호</M.UmbrellaNum>
+          <M.UmbrellaNum>{numberList}</M.UmbrellaNum>
           <M.State>State 상태</M.State>
           <M.Schedule>Schedule 반납 예정일</M.Schedule>
         </M.Text>

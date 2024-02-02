@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ReaminText = styled.span`
+export const RemainText = styled.span`
   position: absolute;
   top: 128px;
   left: 294px;
@@ -62,10 +62,14 @@ export const TitleSchedule = styled.div`
   left: 1000px;
 `;
 
+export const CircleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 300px;
+  padding-left: 355px;
+`;
 export const Circle = styled.div`
-  position: absolute;
-  top: 330px;
-  left: 355px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -79,11 +83,10 @@ export const Stroke = styled.div`
   width: 1px;
   height: 350px;
   background-color: #393939;
+  z-index: 1;
 `;
 
 export const Text = styled.div`
-  display: flex;
-  justify-content: space-evenly;
   color: var(--White, #fff);
   font-family: Pretendard;
   font-size: 18px;
@@ -93,9 +96,12 @@ export const Text = styled.div`
 `;
 
 export const UmbrellaNum = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
   position: absolute;
-  top: 330px;
-  left: 460px;
+  top: 300px;
+  left: 500px;
 `;
 
 export const State = styled.div`
