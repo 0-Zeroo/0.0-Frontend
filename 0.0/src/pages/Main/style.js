@@ -110,16 +110,6 @@ export const State = styled.div`
   left: 765px;
 `;
 
-export const StateCircle = styled.div`
-  position: absolute;
-  top: 3px;
-  right: 50px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #19e76c;
-`;
-
 export const StateText = styled.div`
   position: relative;
   left: 22px;

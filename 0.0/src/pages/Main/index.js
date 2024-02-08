@@ -30,7 +30,6 @@ const index = () => {
         <M.Text>
           <M.UmbrellaNum>{numberList}</M.UmbrellaNum>
           <M.State>
-            <M.StateCircle />
             <M.StateText>
               <State />
             </M.StateText>
