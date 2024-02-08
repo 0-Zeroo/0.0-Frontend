@@ -1,5 +1,6 @@
 import React from "react";
 import Main from "./Main";
+import State from "./State";
 import * as S from "../../styles/theme";
 import * as M from "./style";
 
@@ -30,7 +31,9 @@ const index = () => {
           <M.UmbrellaNum>{numberList}</M.UmbrellaNum>
           <M.State>
             <M.StateCircle />
-            <M.StateText>대여가능</M.StateText>
+            <M.StateText>
+              <State />
+            </M.StateText>
           </M.State>
           <M.Schedule>
             <M.ScheduleStroke />
