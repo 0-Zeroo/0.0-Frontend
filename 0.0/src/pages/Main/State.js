@@ -118,7 +118,7 @@ const State = () => {
 const Box = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 36px;
 `;
 
 const StateBox = styled.div`

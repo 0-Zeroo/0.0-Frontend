@@ -106,8 +106,8 @@ export const UmbrellaNum = styled.div`
 
 export const State = styled.div`
   position: absolute;
-  top: 300px;
-  left: 765px;
+  top: 299px;
+  left: 735px;
 `;
 
 export const StateText = styled.div`
