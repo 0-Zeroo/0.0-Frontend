@@ -85,38 +85,43 @@ const State = () => {
   };
   return (
     <>
-      <div>
-        <Circle color={ac} />
-        {at}
-      </div>
-      <div>
-        <Circle color={bc} />
-        {bt}
-      </div>
-      <div>
-        <Circle color={cc} />
-        {ct}
-      </div>
-      <div>
-        <Circle color={dc} />
-        {dt}
-      </div>
-      <div>
-        <Circle color={ec} />
-        {et}
-      </div>
-      <div>
-        <Circle color={fc} />
-        {ft}
-      </div>
+      <StateBox>
+        <div>
+          <Circle color={ac} />
+          {at}
+        </div>
+        <div>
+          <Circle color={bc} />
+          {bt}
+        </div>
+        <div>
+          <Circle color={cc} />
+          {ct}
+        </div>
+        <div>
+          <Circle color={dc} />
+          {dt}
+        </div>
+        <div>
+          <Circle color={ec} />
+          {et}
+        </div>
+        <div>
+          <Circle color={fc} />
+          {ft}
+        </div>
+      </StateBox>
     </>
   );
 };
 
+const StateBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+`;
+
 const Circle = styled.div`
-  position: absolute;
-  top: ${(props) => props.top};
-  right: 70px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
