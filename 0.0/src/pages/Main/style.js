@@ -74,6 +74,7 @@ export const Circle = styled.div`
   height: 18px;
   border-radius: 50%;
   background-color: #fbc22b;
+  z-index: 10;
 `;
 
 export const Stroke = styled.div`
@@ -107,7 +108,7 @@ export const UmbrellaNum = styled.div`
 export const State = styled.div`
   position: absolute;
   top: 299px;
-  left: 735px;
+  left: 737px;
 `;
 
 export const StateText = styled.div`
