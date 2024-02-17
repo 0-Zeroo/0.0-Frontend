@@ -66,31 +66,10 @@ export const Circle = styled.div`
   border-radius: 50%;
   background-color: #fbc22b;
 `;
-
 export const Box = styled.div`
-  position: absolute;
-  top: 230px;
-  left: 375px;
-  width: 300px;
-  height: 72px;
-  border-radius: 11px;
-  background-color: #1b1b1b;
-`;
-
-export const BorrowNum = styled.span`
-  position: relative;
-  top: 20px;
-  left: 30px;
-  color: #8ce33e;
-  font-size: 26px;
-  font-weight: 600;
-`;
-
-export const BorrowDate = styled.span`
-  position: relative;
-  top: 1px;
-  left: 50px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 369px;
+  padding-top: 230px;
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import Main from "./Main";
-import State from "./State";
+import State from "./State/index";
 import * as S from "./style";
 
 const index = () => {

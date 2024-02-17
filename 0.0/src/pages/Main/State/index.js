@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import * as S from "./style";
 import { doc, getDoc } from "firebase/firestore";
-import { firestore } from "./firebase";
+import { firestore } from "../firebase";
 
 const State = () => {
   const [seats, setSeats] = useState([]);
@@ -23,34 +23,15 @@ const State = () => {
   }, []);
 
   return (
-    <Box>
+    <S.Box>
       {seats.map((seat) => (
-        <StateBox key={seat.label}>
-          <Circle color={seat.color} />
+        <S.StateBox key={seat.label}>
+          <S.Circle color={seat.color} />
           {seat.label}: {seat.status}
-        </StateBox>
+        </S.StateBox>
       ))}
-    </Box>
+    </S.Box>
   );
 };
-
-const Box = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-`;
-
-const StateBox = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
-const Circle = styled.div`
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: ${(props) => props.color};
-`;
 
 export default State;
