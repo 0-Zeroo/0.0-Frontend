@@ -73,3 +73,9 @@ export const Box = styled.div`
   padding-left: 369px;
   padding-top: 230px;
 `;
+
+export const Borrow = styled.div`
+  position: absolute;
+  bottom: 430px;
+  left: 875px;
+`;

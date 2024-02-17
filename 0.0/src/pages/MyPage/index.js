@@ -1,9 +1,9 @@
 import React from "react";
 import * as S from "./style";
 import DateBox from "./DateBox/index";
+import Borrow from "./Borrow/index";
 
 const index = () => {
-  const numbers = [1, 2, 3, 4, 5];
   return (
     <>
       <S.Background>
@@ -24,6 +24,9 @@ const index = () => {
         <S.Box>
           <DateBox /> <DateBox /> <DateBox /> <DateBox /> <DateBox />
         </S.Box>
+        <S.Borrow>
+          <Borrow />
+        </S.Borrow>
       </S.Background>
     </>
   );
