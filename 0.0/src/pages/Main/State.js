@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { doc, getDoc } from 'firebase/firestore';
-import { firestore } from './firebase';
+import { doc, getDoc } from "firebase/firestore";
+import { firestore } from "./firebase";
 
 const State = () => {
   const [seats, setSeats] = useState([]);
@@ -10,11 +10,11 @@ const State = () => {
     const fetchData = async () => {
       const newSeats = [];
       for (let i = 1; i <= 6; i++) {
-        const umbrellaRef = doc(firestore, 'Umbrella', `Umbrella${i}`);
+        const umbrellaRef = doc(firestore, "Umbrella", `Umbrella${i}`);
         const umbrellaDoc = await getDoc(umbrellaRef);
         const seatData = umbrellaDoc.data()?.Seat;
-        const status = seatData ? '대여가능' : '대여불가';
-        const color = seatData ? '#19E76C' : '#F86464';
+        const status = seatData ? "대여가능" : "대여불가";
+        const color = seatData ? "#19E76C" : "#F86464";
         newSeats.push({ label: String.fromCharCode(64 + i), status, color });
       }
       setSeats(newSeats);
@@ -23,14 +23,14 @@ const State = () => {
   }, []);
 
   return (
-      <Box>
-        {seats.map(seat => (
-            <StateBox key={seat.label}>
-              <Circle color={seat.color} />
-              {seat.label}: {seat.status}
-            </StateBox>
-        ))}
-      </Box>
+    <Box>
+      {seats.map((seat) => (
+        <StateBox key={seat.label}>
+          <Circle color={seat.color} />
+          {seat.label}: {seat.status}
+        </StateBox>
+      ))}
+    </Box>
   );
 };
 
