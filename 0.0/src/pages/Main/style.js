@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const Background = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: #0a0a0a;
+`;
+
 export const RemainText = styled.span`
   position: absolute;
   top: 128px;

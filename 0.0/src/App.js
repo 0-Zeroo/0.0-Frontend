@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: pretendard;
     line-height: normal;
     font-style: normal;
-    background: #0a0a0a;
+    white-space: nowrap;
   }
   
 `;
