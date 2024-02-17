@@ -30,6 +30,7 @@ export const Text = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  background: #fff;
 `;
 export const ImgBox = styled.div`
   justify-content: center;

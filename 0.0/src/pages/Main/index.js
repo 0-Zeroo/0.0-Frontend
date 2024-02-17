@@ -1,49 +1,46 @@
 import React from "react";
 import Main from "./Main";
 import State from "./State";
-import * as S from "../../styles/theme";
-import * as M from "./style";
+import * as S from "./style";
 
 const index = () => {
   const numbers = ["1", "2", "3", "4", "5", "6"];
   const numberList = numbers.map((number) => <Main number={number} />);
   return (
     <>
-      <S.Background>
-        <M.RemainText>남은 우산</M.RemainText>
-        <M.Num>5</M.Num>
-        <M.TitleCircle />
-        <M.TitleText>
-          <M.TitleUmbrellaNum>Number 우산 번호</M.TitleUmbrellaNum>
-          <M.TitleState>State 상태</M.TitleState>
-          <M.TitleSchedule>Schedule 반납 예정일</M.TitleSchedule>
-        </M.TitleText>
-        <M.Stroke />
-        <M.CircleContainer>
-          <M.Circle />
-          <M.Circle />
-          <M.Circle />
-          <M.Circle />
-          <M.Circle />
-          <M.Circle />
-        </M.CircleContainer>
-        <M.Text>
-          <M.UmbrellaNum>{numberList}</M.UmbrellaNum>
-          <M.State>
-            <M.StateText>
-              <State />
-            </M.StateText>
-          </M.State>
-          <M.Schedule>
-            <M.ScheduleStroke />
-            <M.ScheduleStroke />
-            <M.ScheduleStroke />
-            <M.ScheduleStroke />
-            <M.ScheduleStroke />
-            <M.ScheduleStroke />
-          </M.Schedule>
-        </M.Text>
-      </S.Background>
+      <S.RemainText>남은 우산</S.RemainText>
+      <S.Num>5</S.Num>
+      <S.TitleCircle />
+      <S.TitleText>
+        <S.TitleUmbrellaNum>Number 우산 번호</S.TitleUmbrellaNum>
+        <S.TitleState>State 상태</S.TitleState>
+        <S.TitleSchedule>Schedule 반납 예정일</S.TitleSchedule>
+      </S.TitleText>
+      <S.Stroke />
+      <S.CircleContainer>
+        <S.Circle />
+        <S.Circle />
+        <S.Circle />
+        <S.Circle />
+        <S.Circle />
+        <S.Circle />
+      </S.CircleContainer>
+      <S.Text>
+        <S.UmbrellaNum>{numberList}</S.UmbrellaNum>
+        <S.State>
+          <S.StateText>
+            <State />
+          </S.StateText>
+        </S.State>
+        <S.Schedule>
+          <S.ScheduleStroke />
+          <S.ScheduleStroke />
+          <S.ScheduleStroke />
+          <S.ScheduleStroke />
+          <S.ScheduleStroke />
+          <S.ScheduleStroke />
+        </S.Schedule>
+      </S.Text>
     </>
   );
 };
