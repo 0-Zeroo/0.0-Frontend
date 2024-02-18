@@ -62,10 +62,10 @@ export const TitleState = styled.div`
   left: 750px;
 `;
 
-export const TitleSchedule = styled.div`
+export const TitleStudent = styled.div`
   position: absolute;
   top: 227px;
-  left: 1000px;
+  left: 1015px;
 `;
 
 export const CircleContainer = styled.div`

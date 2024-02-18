@@ -15,7 +15,7 @@ const index = () => {
         <S.TitleText>
           <S.TitleUmbrellaNum>Number 우산 번호</S.TitleUmbrellaNum>
           <S.TitleState>State 상태</S.TitleState>
-          <S.TitleSchedule>Student 대여 학생</S.TitleSchedule>
+          <S.TitleStudent>Student 대여 학생</S.TitleStudent>
         </S.TitleText>
         <S.Stroke />
         <S.CircleContainer>
