@@ -33,14 +33,14 @@ const index = () => {
               <State />
             </S.StateText>
           </S.State>
-          <S.Schedule>
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-          </S.Schedule>
+          <S.Student>
+            <S.StudentStroke />
+            <S.StudentStroke />
+            <S.StudentStroke />
+            <S.StudentStroke />
+            <S.StudentStroke />
+            <S.StudentStroke />
+          </S.Student>
         </S.Text>
       </S.Background>
     </>

@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderT from "./components/HeaderT/index";
 import Main from "./teacher/Main/index";
+import List from "./teacher/List/index";
 import { createGlobalStyle } from "styled-components";
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <HeaderT />
         <Routes>
           <Route path="/" element={<Main />}></Route>
+          <Route path="/list" element={<List />}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -121,7 +121,7 @@ export const StateText = styled.div`
   position: relative;
   left: 22px;
 `;
-export const Schedule = styled.div`
+export const Student = styled.div`
   display: flex;
   flex-direction: column;
   gap: 55px;
@@ -130,7 +130,7 @@ export const Schedule = styled.div`
   left: 1100px;
 `;
 
-export const ScheduleStroke = styled.div`
+export const StudentStroke = styled.div`
   width: 19px;
   height: 3px;
   background-color: #ffffff;
