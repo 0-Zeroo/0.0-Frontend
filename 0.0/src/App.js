@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/index";
+import HeaderS from "./components/HeaderS/index";
 import Main from "./pages/Main/index";
 import MyPage from "./pages/MyPage/index";
 import { createGlobalStyle } from "styled-components";
@@ -9,7 +9,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <BrowserRouter>
-        <Header />
+        <HeaderS />
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/mypage" element={<MyPage />}></Route>
