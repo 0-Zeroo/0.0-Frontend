@@ -24,6 +24,14 @@ const index = () => {
         </S.CircleContainer>
         <S.Text>
           <S.UmbrellaNum>{numberList}</S.UmbrellaNum>
+          <S.StudentContainer>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+          </S.StudentContainer>
         </S.Text>
       </S.Background>
     </>

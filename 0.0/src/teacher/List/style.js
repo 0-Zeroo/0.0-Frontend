@@ -89,3 +89,11 @@ export const UmbrellaNum = styled.div`
   top: 288px;
   left: 570px;
 `;
+
+export const StudentContainer = styled.div`
+  position: relative;
+  bottom: 1000px;
+  color: white;
+`;
+
+export const Student = styled.div``;

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderT from "./components/HeaderT/index";
 import Main from "./teacher/Main/index";
 import List from "./teacher/List/index";
+import Login from "./components/Login/index";
 import { createGlobalStyle } from "styled-components";
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/list" element={<List />}></Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </BrowserRouter>
     </>
