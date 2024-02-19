@@ -20,8 +20,8 @@ export const MainText = styled.span`
 
 export const TitleCircle = styled.div`
   position: absolute;
-  top: 285px;
-  left: 517px;
+  top: 295px;
+  left: 577px;
   width: 28px;
   height: 28px;
   background-color: #fbc22b;
@@ -37,22 +37,22 @@ export const TitleText = styled.div`
 
 export const TitleUmbrellaNum = styled.div`
   position: absolute;
-  top: 200px;
-  left: 470px;
+  top: 210px;
+  left: 530px;
 `;
 
 export const TitleStudent = styled.div`
   position: absolute;
-  top: 200px;
-  left: 1015px;
+  top: 210px;
+  left: 840px;
 `;
 
 export const CircleContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 52px;
-  padding-top: 362px;
-  padding-left: 522px;
+  padding-top: 372px;
+  padding-left: 583px;
 `;
 export const Circle = styled.div`
   width: 18px;
@@ -64,8 +64,8 @@ export const Circle = styled.div`
 
 export const Stroke = styled.div`
   position: absolute;
-  top: 295px;
-  left: 531px;
+  top: 305px;
+  left: 591px;
   width: 1px;
   height: 350px;
   background-color: #393939;
@@ -74,11 +74,8 @@ export const Stroke = styled.div`
 
 export const Text = styled.div`
   color: var(--White, #fff);
-  font-family: Pretendard;
   font-size: 18px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
 `;
 
 export const UmbrellaNum = styled.div`
@@ -86,14 +83,17 @@ export const UmbrellaNum = styled.div`
   flex-direction: column;
   gap: 50px;
   position: absolute;
-  top: 288px;
-  left: 570px;
+  top: 298px;
+  left: 630px;
 `;
 
 export const StudentContainer = styled.div`
-  position: relative;
-  bottom: 1000px;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: absolute;
+  top: 298px;
+  left: 855px;
 `;
 
 export const Student = styled.div``;
