@@ -15,7 +15,7 @@ const index = () => {
         <S.TitleText>
           <S.TitleUmbrellaNum>Number 우산 번호</S.TitleUmbrellaNum>
           <S.TitleState>State 상태</S.TitleState>
-          <S.TitleSchedule>Schedule 반납 예정일</S.TitleSchedule>
+          <S.TitleStudent>Student 대여 학생</S.TitleStudent>
         </S.TitleText>
         <S.Stroke />
         <S.CircleContainer>
@@ -33,14 +33,14 @@ const index = () => {
               <State />
             </S.StateText>
           </S.State>
-          <S.Schedule>
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-          </S.Schedule>
+          <S.Student>
+            <S.StudentStroke />
+            <S.StudentStroke />
+            <S.StudentStroke />
+            <S.StudentStroke />
+            <S.StudentStroke />
+            <S.StudentStroke />
+          </S.Student>
         </S.Text>
       </S.Background>
     </>

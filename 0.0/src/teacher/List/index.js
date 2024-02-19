@@ -1,6 +1,5 @@
 import React from "react";
-import Main from "./Main";
-import State from "./State/index";
+import Main from "../Main/Main";
 import * as S from "./style";
 
 const index = () => {
@@ -9,13 +8,11 @@ const index = () => {
   return (
     <>
       <S.Background>
-        <S.RemainText>남은 우산</S.RemainText>
-        <S.Num>5</S.Num>
+        <S.MainText>우산 대여자 목록</S.MainText>
         <S.TitleCircle />
         <S.TitleText>
           <S.TitleUmbrellaNum>Number 우산 번호</S.TitleUmbrellaNum>
-          <S.TitleState>State 상태</S.TitleState>
-          <S.TitleSchedule>Schedule 반납 예정일</S.TitleSchedule>
+          <S.TitleStudent>Student 대여 학생</S.TitleStudent>
         </S.TitleText>
         <S.Stroke />
         <S.CircleContainer>
@@ -24,23 +21,17 @@ const index = () => {
           <S.Circle />
           <S.Circle />
           <S.Circle />
-          <S.Circle />
         </S.CircleContainer>
         <S.Text>
           <S.UmbrellaNum>{numberList}</S.UmbrellaNum>
-          <S.State>
-            <S.StateText>
-              <State />
-            </S.StateText>
-          </S.State>
-          <S.Schedule>
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-            <S.ScheduleStroke />
-          </S.Schedule>
+          <S.StudentContainer>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+            <S.Student>1학년 2반 12번 신희성</S.Student>
+          </S.StudentContainer>
         </S.Text>
       </S.Background>
     </>
