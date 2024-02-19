@@ -1,86 +1,62 @@
 import React, { useState } from 'react';
+import { backgroundStyle, modalStyle, logoStyle, textStyle, inputStyle } from './style';
+import { doc, getDoc } from 'firebase/firestore';
+import { firestore } from '../../firebase';
+import logo from "../../assets/logo.svg";
 
-const backgroundStyle = {
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  backgroundColor: 'rgba(0, 0, 0, 0.4)', 
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
-
-const modalStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  position: 'fixed', 
-  width: '350px',
-  height: '273px',
-  backgroundColor: '#393939',
-  borderRadius: '40px',
-  color: 'white',
-  padding: '20px',
-  boxSizing: 'border-box'
-};
-
-const logoStyle = {
-  marginBottom: '24px'
-};
-
-const textStyle = {
-  fontFamily: 'Pretendard, sans-serif',
-  fontWeight: '600', 
-  fontSize: '24px',
-  marginBottom: '24px'
-};
-
-const inputStyle = {
-  width: '200px',
-  height: '22px', 
-  backgroundColor: '#4B4B4B',
-  color: 'white',
-  fontFamily: 'Pretendard, sans-serif',
-  fontWeight: '400',
-  fontSize: '12px',
-  border: 'none',
-  borderRadius: '13px',
-  padding: '10px 15px',
-  outline: 'none',
-  marginBottom: '24px' 
+const Search = async (str1, str2) => {
+  const umbrellaRef = doc(firestore, "ID", str1);
+  const umbrellaDoc = await getDoc(umbrellaRef);
+  return umbrellaDoc.data()?.Password === str2; // 비교할 값이 데이터의 어떤 부분인지에 따라 수정해야 합니다.
 };
 
 const LoginModal = () => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue1, setInputValue1] = useState('');
+  const [inputValue2, setInputValue2] = useState('');
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+  const handleInputChange1 = (event) => {
+    setInputValue1(event.target.value);
   };
 
-  const handleKeyDown = (event) => {
+  const handleInputChange2 = (event) => {
+    setInputValue2(event.target.value);
+  };
+
+  const handleKeyDown = async (event) => {
     if (event.key === 'Enter') {
-      setInputValue(''); 
+      const result = await Search(inputValue1, inputValue2);
+      if (result) {
+        console.log("login");
+      } else {
+        console.log("fail");
+      }
+      setInputValue1('');
+      setInputValue2('');
     }
   };
 
   return (
-    <div style={backgroundStyle}> 
-      <div style={modalStyle}>
-        <img src="/0.0/src/assets/logo.svg" alt="Logo" style={logoStyle} />
-        <div style={textStyle}>Login</div>
-        <input
-          style={inputStyle}
-          type="text"
-          placeholder="Google로 로그인하기"
-          value={inputValue}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown} 
-        />
+      <div style={backgroundStyle}>
+        <div style={modalStyle}>
+          <img src={logo} alt="Logo" style={logoStyle}/>
+          <div style={textStyle}>Login</div>
+          <input
+              style={inputStyle}
+              type="text"
+              placeholder="아이디"
+              value={inputValue1}
+              onChange={handleInputChange1}
+          />
+          <input
+              style={inputStyle}
+              type="text"
+              placeholder="비밀번호"
+              value={inputValue2}
+              onChange={handleInputChange2}
+              onKeyDown={handleKeyDown} // Enter 키 입력 시 검색
+          />
+        </div>
       </div>
-    </div>
   );
 };
 
