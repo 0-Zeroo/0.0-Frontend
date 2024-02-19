@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as S from "./style";
 import { doc, getDoc } from "firebase/firestore";
-import { firestore } from "../firebase";
+import { firestore } from "../../../firebase";
 
 const State = () => {
   const [seats, setSeats] = useState([]);
