@@ -18,16 +18,19 @@ export const Stroke = styled.div`
 export const Info = styled.div`
   position: absolute;
   top: 128px;
-  left: 300px;
+  left: 294px;
   color: var(--White, #fff);
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
 `;
 
-export const Name = styled.div`
-  position: relative;
-  top: 10px;
-  font-size: 24px;
+export const Password = styled.div`
+  position: absolute;
+  top: 170px;
+  left: 294px;
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: 600;
 `;
 
 export const Times = styled.div`

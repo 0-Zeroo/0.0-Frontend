@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderT from "./components/HeaderT/index";
 import Main from "./teacher/Main/index";
@@ -35,13 +35,15 @@ const GlobalStyle = createGlobalStyle`
   
 `;
 export default App;
+*/
 
-/* 학생버전
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderS from "./components/HeaderS/index";
 import Main from "./pages/Main/index";
 import MyPage from "./pages/MyPage/index";
+import Login from "./components/Login/index";
+import Password from "./components/Password/index";
 import { createGlobalStyle } from "styled-components";
 const App = () => {
   return (
@@ -52,6 +54,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/mypage" element={<MyPage />}></Route>
+          <Route path="/password" element={<Password />}></Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </BrowserRouter>
     </>
@@ -70,4 +74,3 @@ const GlobalStyle = createGlobalStyle`
   
 `;
 export default App;
-*/

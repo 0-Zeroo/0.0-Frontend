@@ -11,11 +11,8 @@ export const RemainText = styled.span`
   top: 128px;
   left: 294px;
   color: var(--White, #fff);
-  font-family: Pretendard;
   font-size: 24px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 `;
 
 export const Num = styled.span`

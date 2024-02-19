@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as S from "./style";
 import DateBox from "./DateBox/index";
 import Borrow from "./Borrow/index";
@@ -8,11 +9,10 @@ const index = () => {
     <>
       <S.Background>
         <S.Stroke />
-        <S.Info>
-          1학년 2반 12번 신희성
-          <br />
-          <S.Name>기숙사 침대러</S.Name>
-        </S.Info>
+        <S.Info>1학년 2반 12번 신희성</S.Info>
+        <Link to="/password">
+          <S.Password>비밀번호 바꾸기</S.Password>
+        </Link>
         <S.Times>
           우산 대여 횟수
           <S.Num>5</S.Num>

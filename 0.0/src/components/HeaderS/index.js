@@ -16,11 +16,11 @@ const index = () => {
           </Link>
         </S.ImgBox>
         <S.TextBox>
-          <S.Link to="/login">
+          <Link to="/login">
             <S.Box>
               <S.Text>로그인</S.Text>
             </S.Box>
-          </S.Link>
+          </Link>
         </S.TextBox>
       </S.Container>
     </>
