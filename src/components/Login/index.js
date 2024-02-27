@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { backgroundStyle, modalStyle, logoStyle, textStyle, inputStyle } from './style';
-import { signInWithEmailAndPassword } from 'firebase/auth'; // Firebase Authentication 함수 임포트
-import { auth } from '../../firebase'; // Firebase 초기화 파일에서 auth 객체 임포트
+import { signInWithEmailAndPassword } from 'firebase/auth'; 
+import { auth } from '../../firebase'; 
 import logo from "../../assets/logo.svg";
 
 const Login = async (email, password) => {
