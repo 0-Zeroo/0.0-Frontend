@@ -1,66 +1,70 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { backgroundStyle, modalStyle, logoStyle, textStyle, inputStyle } from './style';
-import { doc, getDoc } from 'firebase/firestore';
-import { firestore } from '../../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth'; // Firebase Authentication 함수 임포트
+import { auth } from '../../firebase'; // Firebase 초기화 파일에서 auth 객체 임포트
 import logo from "../../assets/logo.svg";
 
-const Search = async (str1, str2) => {
-  const umbrellaRef = doc(firestore, "ID", str1);
-  const umbrellaDoc = await getDoc(umbrellaRef);
-  return umbrellaDoc.data()?.Password === str2;
-};
-
-const LoginModal = () => {
-  const [inputValue1, setInputValue1] = useState('');
-  const [inputValue2, setInputValue2] = useState('');
-  const navigate = useNavigate(); 
-
-  const handleInputChange1 = (event) => {
-    setInputValue1(event.target.value);
-  };
-
-  const handleInputChange2 = (event) => {
-    setInputValue2(event.target.value);
-  };
-
-const handleKeyDown = async (event) => {
-  if (event.key === 'Enter') {
-    const result = await Search(inputValue1, inputValue2);
-    if (result) {
-      console.log("login");
-      navigate('/'); 
-    } else {
-      console.log("fail");
-      alert("틀렸습니다 다시하세요!"); 
-    }
-    setInputValue1('');
-    setInputValue2('');
+const Login = async (email, password) => {
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    console.log(userCredential.user); 
+    return true; 
+  } catch (error) {
+    console.error("형 이건 아니지 실패했짜나 다시해봐");
+    return false; 
   }
 };
 
+const LoginModal = () => {
+  const [inputEmail, setInputEmail] = useState('');
+  const [inputPassword, setInputPassword] = useState('');
+  const navigate = useNavigate(); 
+
+  const handleEmailChange = (event) => {
+    setInputEmail(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setInputPassword(event.target.value);
+  };
+
+  const handleKeyDown = async (event) => {
+    if (event.key === 'Enter') {
+      const result = await Login(inputEmail, inputPassword);
+      if (result) {
+        console.log("Login successful");
+        navigate('/'); 
+      } else {
+        alert("형 비밀번호 아이디 틀렸어"); 
+      }
+      setInputEmail('');
+      setInputPassword('');
+    }
+  };
+
   return (
-      <div style={backgroundStyle}>
-        <div style={modalStyle}>
-          <img src={logo} alt="Logo" style={logoStyle}/>
-          <div style={textStyle}>Login</div>
-          <input
-              style={inputStyle}
-              type="text"
-              placeholder="아이디"
-              value={inputValue1}
-              onChange={handleInputChange1}
-          />
-          <input
-              style={inputStyle}
-              type="password" 
-              placeholder="비밀번호"
-              value={inputValue2}
-              onChange={handleInputChange2}
-              onKeyDown={handleKeyDown}
-          />
-        </div>
+    <div style={backgroundStyle}>
+      <div style={modalStyle}>
+        <img src={logo} alt="Logo" style={logoStyle}/>
+        <div style={textStyle}>Login</div>
+        <input
+          style={inputStyle}
+          type="email"
+          placeholder="이메일"
+          value={inputEmail}
+          onChange={handleEmailChange}
+        />
+        <input
+          style={inputStyle}
+          type="password" 
+          placeholder="비밀번호"
+          value={inputPassword}
+          onChange={handlePasswordChange}
+          onKeyDown={handleKeyDown}
+        />
       </div>
+    </div>
   );
 };
 
