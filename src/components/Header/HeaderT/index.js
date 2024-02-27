@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as S from "./style";
 import logo from "../../../assets/logo.svg";
-import list from "../../../assets/list.svg";
 import over from "../../../assets/over.svg";
 
 const index = () => {
@@ -12,9 +11,6 @@ const index = () => {
         <S.ImgBox>
           <Link to="/teacher">
             <S.Logo src={logo} />
-          </Link>
-          <Link to="/list">
-            <S.List src={list} />
           </Link>
           <Link to="/over">
             <S.Over src={over} />

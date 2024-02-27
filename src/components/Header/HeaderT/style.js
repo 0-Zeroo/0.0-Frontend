@@ -38,11 +38,6 @@ export const ImgBox = styled.div`
 export const Logo = styled.img`
   padding: 0 10px;
 `;
-export const List = styled.img`
-  position: relative;
-  bottom: 3px;
-  padding: 0 10px;
-`;
 
 export const Over = styled.img`
   position: relative;
