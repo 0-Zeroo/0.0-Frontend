@@ -15,7 +15,7 @@ const State = () => {
         const seatData = umbrellaDoc.data()?.Seat;
         const status = seatData ? "대여가능" : "대여불가";
         const color = seatData ? "#19E76C" : "#F86464";
-        newSeats.push({ label: String.fromCharCode(64 + i), status, color });
+        newSeats.push({ status, color });
       }
       setSeats(newSeats);
     };
@@ -27,7 +27,7 @@ const State = () => {
       {seats.map((seat) => (
         <S.StateBox key={seat.label}>
           <S.Circle color={seat.color} />
-          {seat.label}: {seat.status}
+          {seat.label}{seat.status}
         </S.StateBox>
       ))}
     </S.Box>

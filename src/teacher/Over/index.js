@@ -12,7 +12,6 @@ const index = () => {
     <>
       <S.Background>
         <S.MainText>우산 미반납자 목록</S.MainText>
-        <S.Print>미반납자 목록 인쇄하기</S.Print>
         <S.TitleText>
           <S.TitleUmbrellaNum>Number 우산 번호</S.TitleUmbrellaNum>
           <S.TitleStudent>Student 대여 학생</S.TitleStudent>
