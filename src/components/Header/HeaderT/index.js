@@ -10,7 +10,7 @@ const index = () => {
     <>
       <S.Container>
         <S.ImgBox>
-          <Link to="/">
+          <Link to="/teacher">
             <S.Logo src={logo} />
           </Link>
           <Link to="/list">
