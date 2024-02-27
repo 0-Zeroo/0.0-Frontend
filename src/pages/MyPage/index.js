@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { auth } from "../../firebase"; // Firebase 설정 파일에서 auth 객체를 임포트
 import * as S from "./style";
 import DateBox from "./DateBox/index";
 import Borrow from "./Borrow/index";
 
-const index = () => {
+const Index = () => {
+  const [userEmail, setUserEmail] = useState(null); 
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user) {
+        setUserEmail(user.email); 
+      } else {
+        setUserEmail(null); 
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <>
       <S.Background>
         <S.Stroke />
-        <S.Info>1학년 2반 12번 신희성</S.Info>
+        <S.Info>{userEmail ? userEmail : "로그인 하세요"}</S.Info>
         <Link to="/password">
           <S.Password>비밀번호 바꾸기</S.Password>
         </Link>
@@ -32,4 +47,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
