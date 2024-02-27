@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import * as S from "./style";
-import logo from "../../assets/logo.svg";
-import list from "../../assets/list.svg";
-import over from "../../assets/over.svg";
+import logo from "../../../assets/logo.svg";
+import list from "../../../assets/list.svg";
+import over from "../../../assets/over.svg";
 
 const index = () => {
   return (
@@ -20,13 +20,6 @@ const index = () => {
             <S.Over src={over} />
           </Link>
         </S.ImgBox>
-        <S.TextBox>
-          <Link to="/login">
-            <S.Box>
-              <S.Text>로그인</S.Text>
-            </S.Box>
-          </Link>
-        </S.TextBox>
       </S.Container>
     </>
   );

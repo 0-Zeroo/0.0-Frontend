@@ -33,7 +33,6 @@ export const Text = styled.div`
 `;
 export const ImgBox = styled.div`
   justify-content: center;
-  padding-left: 150px;
   margin: 0 auto;
 `;
 export const Logo = styled.img`
