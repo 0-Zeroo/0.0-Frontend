@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { auth } from "../../firebase"; // Firebase 설정 파일에서 auth 객체를 임포트
+import { auth } from "../../firebase"; 
 import * as S from "./style";
 import DateBox from "./DateBox/index";
 import Borrow from "./Borrow/index";

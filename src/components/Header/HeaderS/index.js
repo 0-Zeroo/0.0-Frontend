@@ -3,22 +3,34 @@ import { Link } from 'react-router-dom';
 import * as S from './style';
 import logo from '../../../assets/logo.svg';
 import user from '../../../assets/user.svg';
-import { auth } from '../../../firebase'; 
+import { auth } from '../../../firebase';
+import { getFirestore, doc, getDoc } from 'firebase/firestore'; 
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userEmail, setUserEmail] = useState('');
+  const [userName, setUserName] = useState('');
 
   useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
+    const unsubscribe = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
         setIsLoggedIn(true);
-        setUserEmail(user.email);
+        const firestore = getFirestore(); 
+        const userRef = doc(firestore, 'People', userAuth.email); 
+        const docSnap = await getDoc(userRef);
+
+        if (docSnap.exists()) {
+          setUserName(docSnap.data().NAME); 
+        } else {
+          console.log("No such document!");
+          setUserName('');
+        }
       } else {
         setIsLoggedIn(false);
-        setUserEmail('');
+        setUserName('');
       }
     });
+
+    return () => unsubscribe(); 
   }, []);
 
   return (
@@ -34,7 +46,7 @@ const Header = () => {
         </S.ImgBox>
         <S.TextBox>
           {isLoggedIn ? (
-            <S.Text style={{ color: 'white' }}>{userEmail}</S.Text>
+            <S.Text style={{ color: 'white' }}>{userName}</S.Text>
           ) : (
             <Link to="/login">
               <S.Box>
