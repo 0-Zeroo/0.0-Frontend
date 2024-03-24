@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
+import React, {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
+import {getAuth, onAuthStateChanged} from "firebase/auth";
+import {doc, getDoc} from "firebase/firestore";
+import {firestore} from "../../firebase";
 import * as S from "./style";
 
 const auth = getAuth();
-const db = getFirestore();
 
 const Index = () => {
     const [userName, setUserName] = useState("");
@@ -13,27 +13,17 @@ const Index = () => {
     const [userSeat, setUserSeat] = useState("");
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
             if (user) {
-                const userRef = doc(db, "People", user.email);
-                getDoc(userRef).then((docSnap) => {
-                    if (docSnap.exists()) {
-                        setUserName(docSnap.data()?.Name || "");
-                        setUserBorrow(docSnap.data()?.Borrow || 0);
-                        setUserSeat(docSnap.data()?.Seat || "");
-                    } else {
-                        setUserName("이름 없음");
-                    }
-                }).catch(error => {
-                    console.error("Error fetching user data:", error);
-                });
-            } else {
-                setUserName("");
-                setUserBorrow(0);
-                setUserSeat("");
+                const userRef = doc(firestore, "People", user.email);
+                const userDoc = await getDoc(userRef);
+                const studentRef = doc(firestore, "Student", userDoc.data()?.Num);
+                const studentDoc = await getDoc(studentRef);
+                setUserName(studentDoc.data()?.Name);
+                setUserBorrow(studentDoc.data()?.Borrow);
+                setUserSeat(studentDoc.data()?.Seat);
             }
         });
-
         return () => unsubscribe();
     }, []);
 
