@@ -18,7 +18,7 @@ const Index = () => {
                 const umbrellaDoc = await getDoc(umbrellaRef);
                 const seatData = umbrellaDoc.data()?.Seat;
                 if (seatData === true) {
-                    setM(prevM => prevM + 0.5);
+                    setM(prevM => prevM + 1);
                 }
             }
         };
